@@ -372,7 +372,7 @@ def Tabu_search_for_CVRP(CC):
     list_init = []
     
     start_time = time.time()
-    current_sol5 = Function.initial_solution3()
+    current_sol5 = Function.initial_solution7()
     list_init.append(current_sol5)
 
     
@@ -477,7 +477,7 @@ for txt_file in txt_files:
             best_fitness, best_sol, data_to_write = Tabu_search_for_CVRP(1)
             end_time = time.time()
             data_to_write["runtime"] = end_time - start_time
-            with open('Random_'+str(data_set)+'_'+str(number_of_cities)+'_'+str(SEGMENT)+'_iter-'+str(i)+'_CL2.json', 'w') as file:  # Open a file in write mode
+            with open('Random_'+str(data_set)+'_'+str(number_of_cities)+'_'+str(SEGMENT)+'_iter-'+str(ite)+'_CL2.json', 'w') as file:  # Open a file in write mode
                 file.write(json.dumps(data_to_write) + "\n")
             print("---------- RESULT ----------")
             print(best_sol)

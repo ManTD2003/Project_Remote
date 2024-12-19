@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        number_of_cities: [100]
+        number_of_cities: [30, 50]
         segment: [10]
-        iteration: [7, 8, 9, 10]
+        iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         data_set: ["C101_0.5.dat", "C101_2.dat", "C101_3.dat", "C201_0.5.dat", "C201_2.dat", "C201_3.dat", "R101_0.5.dat", "R101_2.dat", "R101_3.dat", "RC101_0.5.dat", "RC101_2.dat", "RC101_3.dat"]
     steps:
       - name: Checkout repository
@@ -46,9 +46,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        number_of_cities: [100]
+        number_of_cities: [30, 50]
         segment: [10]
-        iteration: [7, 8, 9, 10]
+        iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         data_set: ["C101_0.5.dat", "C101_2.dat", "C101_3.dat", "C201_0.5.dat", "C201_2.dat", "C201_3.dat", "R101_0.5.dat", "R101_2.dat", "R101_3.dat", "RC101_0.5.dat", "RC101_2.dat", "RC101_3.dat"]
     steps:
       - name: Checkout repository
@@ -87,9 +87,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        number_of_cities: [100]
+        number_of_cities: [30, 50]
         segment: [10]
-        iteration: [7, 8, 9, 10]
+        iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         data_set: ["C101_0.5.dat", "C101_2.dat", "C101_3.dat", "C201_0.5.dat", "C201_2.dat", "C201_3.dat", "R101_0.5.dat", "R101_2.dat", "R101_3.dat", "RC101_0.5.dat", "RC101_2.dat", "RC101_3.dat"]
     steps:
       - name: Checkout repository
@@ -128,9 +128,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        number_of_cities: [100]
+        number_of_cities: [30, 50]
         segment: [10]
-        iteration: [7, 8, 9, 10]
+        iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         data_set: ["C101_0.5.dat", "C101_2.dat", "C101_3.dat", "C201_0.5.dat", "C201_2.dat", "C201_3.dat", "R101_0.5.dat", "R101_2.dat", "R101_3.dat", "RC101_0.5.dat", "RC101_2.dat", "RC101_3.dat"]
     steps:
       - name: Checkout repository
@@ -169,9 +169,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        number_of_cities: [100]
+        number_of_cities: [30, 50]
         segment: [10]
-        iteration: [7, 8, 9, 10]
+        iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         data_set: ["C101_0.5.dat", "C101_2.dat", "C101_3.dat", "C201_0.5.dat", "C201_2.dat", "C201_3.dat", "R101_0.5.dat", "R101_2.dat", "R101_3.dat", "RC101_0.5.dat", "RC101_2.dat", "RC101_3.dat"]
     steps:
       - name: Checkout repository

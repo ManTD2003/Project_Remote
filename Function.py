@@ -537,7 +537,10 @@ def initial_solution7():
     current_fitness = fitness(current_sol)[0]
     best_sol = current_sol
     best_fitness = current_fitness
-    for i in range(Data.number_of_cities):
+    END_SEGMENT =  int(Data.number_of_cities/math.log10(Data.number_of_cities)) * 2
+    i = 0
+    if_improved = False
+    while i < END_SEGMENT:
         neighborhood = []
         
         a = random.random()
@@ -567,7 +570,7 @@ def initial_solution7():
                         index[j] = k
                         best_fitness = cfnode
                         best_sol = neighborhood[j][1][k][0]
-                        # if_improved = True
+                        if_improved = True
 
                     elif cfnode - min_nei[j] < epsilon and tabu_structure1[neighborhood[j][1][k][2]] + tabu_tenure1 <= i:
                         min_nei[j] = cfnode
@@ -580,7 +583,7 @@ def initial_solution7():
                         index[j] = k
                         best_fitness = cfnode
                         best_sol = neighborhood[j][1][k][0]
-                        # if_improved = True
+                        if_improved = True
 
                     elif cfnode - min_nei[j] < epsilon and ( tabu_structure2[neighborhood[j][1][k][2][0]] + tabu_tenure2 <= i or tabu_structure2[neighborhood[j][1][k][2][1]] + tabu_tenure2 <= i ) :
                         min_nei[j] = cfnode
@@ -593,7 +596,7 @@ def initial_solution7():
                         index[j] = k
                         best_fitness = cfnode
                         best_sol = neighborhood[j][1][k][0]
-                        # if_improved = True
+                        if_improved = True
                                                 
                     elif cfnode - min_nei[j] < epsilon and tabu_structure3[neighborhood[j][1][k][2][1]] + tabu_tenure3 <= i and tabu_structure3[neighborhood[j][1][k][2][0]] + tabu_tenure3 <= i:
                         min_nei[j] = cfnode
@@ -606,7 +609,7 @@ def initial_solution7():
                         index[j] = k
                         best_fitness = cfnode
                         best_sol = neighborhood[j][1][k][0]
-                        # if_improved = True
+                        if_improved = True
                                                 
                     elif cfnode - min_nei[j] < epsilon and ( tabu_structure4[neighborhood[j][1][k][2][1]] + tabu_tenure4 <= i or tabu_structure4[neighborhood[j][1][k][2][0]] + tabu_tenure4 <= i or tabu_structure4[neighborhood[j][1][k][2][2]] + tabu_tenure4 <= i):
                         min_nei[j] = cfnode
@@ -639,7 +642,10 @@ def initial_solution7():
             tabu_structure4[neighborhood[index_best_nei][1][index[index_best_nei]][2][0]] = i
             tabu_structure4[neighborhood[index_best_nei][1][index[index_best_nei]][2][2]] = i
     
-
+        if if_improved == False:
+            i += 1
+        else:
+            i = 0
             # print(best_sol)
             # print("------------", j, "------------")
     

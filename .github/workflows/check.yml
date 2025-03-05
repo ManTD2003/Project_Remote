@@ -14,7 +14,7 @@ jobs:
         number_of_cities: [100]
         segment: [12]
         iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: ["C101_0.5.dat"]
+        data_set: [C101_2.dat, C201_0.5.dat, R101_0.5.dat, RC101_0.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -49,7 +49,7 @@ jobs:
         number_of_cities: [100]
         segment: [12]
         iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: ["C101_0.5.dat"]
+        data_set: [C101_2.dat, C201_0.5.dat, R101_0.5.dat, RC101_0.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -90,7 +90,7 @@ jobs:
         number_of_cities: [100]
         segment: [12]
         iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: ["C101_0.5.dat"]
+        data_set: [C101_2.dat, C201_0.5.dat, R101_0.5.dat, RC101_0.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -131,7 +131,7 @@ jobs:
         number_of_cities: [100]
         segment: [12]
         iteration: [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        data_set: ["C101_0.5.dat"]
+        data_set: [C101_2.dat, C201_0.5.dat, R101_0.5.dat, RC101_0.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -172,7 +172,7 @@ jobs:
         number_of_cities: [100]
         segment: [12]
         iteration: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        data_set: ["C101_0.5.dat"]
+        data_set: [C101_2.dat, C201_0.5.dat, R101_0.5.dat, RC101_0.5.dat]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

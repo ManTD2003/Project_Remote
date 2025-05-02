@@ -84,22 +84,22 @@ def Tabu_search(init_solution, tabu_tenure, CC, first_time, Data1, index_conside
     weight = [1/len(nei_set)]*len(nei_set)
     current_sol = init_solution
     data_to_write = {}
-    COUNT = 0
-    while COUNT < 3:
-        print("+++++++++++++++", COUNT, "+++++++++++++++")
-        if T > 3:
-            COUNT += 1
-            T = 0
-            current_neighborhood5, solution_pack1 = Neighborhood.swap_two_array(current_sol)
-            best_sol_in_brnei = current_neighborhood5[0][0]
-            best_fitness_in_brnei = current_neighborhood5[0][1][0]
-            for i in range(1, len(current_neighborhood5)):
-                cfnode = current_neighborhood5[i][1][0]
-                if cfnode - best_fitness_in_brnei < epsilon:
-                    best_sol_in_brnei = current_neighborhood5[i][0]
-                    best_fitness_in_brnei = cfnode
+    # COUNT = 0
+    while T < SEGMENT:
+        # print("+++++++++++++++", COUNT, "+++++++++++++++")
+        # if T > 3:
+        #     COUNT += 1
+        #     T = 0
+        #     current_neighborhood5, solution_pack1 = Neighborhood.swap_two_array(current_sol)
+        #     best_sol_in_brnei = current_neighborhood5[0][0]
+        #     best_fitness_in_brnei = current_neighborhood5[0][1][0]
+        #     for i in range(1, len(current_neighborhood5)):
+        #         cfnode = current_neighborhood5[i][1][0]
+        #         if cfnode - best_fitness_in_brnei < epsilon:
+        #             best_sol_in_brnei = current_neighborhood5[i][0]
+        #             best_fitness_in_brnei = cfnode
             
-            current_sol = best_sol_in_brnei
+        #     current_sol = best_sol_in_brnei
 
         end_time = time.time()
         if end_time - start_time > TIME_LIMIT:
